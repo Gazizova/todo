@@ -1,0 +1,125 @@
+$primary-color: #fc2f70;
+$secondary-color: desaturate($primary-color, 70%);
+$text: darken($secondary-color, 30%);
+$success: transparentize(adjust-hue($primary-color, -120deg), 0.5);
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+form {
+  width: 100%;
+}
+form > input {
+  font-size: 20px;
+  padding: 0;
+  width: 100%;
+  // border: 0;
+  // border: 1px solid $primary-color;
+}
+.Todo-block {
+  //padding: 10px;
+}
+.Todo-List input {
+  font-size: 20px;
+}
+.Todo-List ul {
+  padding: 0px;
+}
+.Todo-List li {
+  list-style-type: none;
+  color: $text;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.delete-item a {
+  visibility: visible;
+}
+.Footer {
+  display: flex;
+  justify-content: space-between;
+}
+.Footer a {
+  display: inline-block;
+  color: $secondary-color;
+}
+.Footer a.active {
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.success {
+  position: absolute;
+  top: -50px;
+  margin-top: auto;
+  border: 2px solid lightgrey;
+  width: 230px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  background-color: $success;
+}
+
+.Todo-App {
+  position: relative;
+  margin-top: 200px;
+  width: 250px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Todo-App::before,
+.Todo-App::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: $primary-color;
+  transform: scaleY(0);
+  transition: transform 0.5s ease;
+}
+
+.Todo-App::before {
+  left: -8px;
+  transform-origin: center top;
+}
+
+.Todo-App:hover::before {
+  transform-origin: center bottom;
+  transform: scaleY(1);
+}
+
+.Todo-App::after {
+  right: -8px;
+  transform-origin: center bottom;
+}
+
+.Todo-App:hover::after {
+  transform-origin: center top;
+  transform: scaleY(1);
+}
