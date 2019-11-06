@@ -14,7 +14,7 @@ export const TodoItem = props => {
       <input type="checkbox" onChange={handleToggle} checked={props.isComplete} /> {props.name}
       <span className="delete-item">
         <a href="#" onClick={handleRemove}>
-          X
+          х
         </a>
       </span>
     </li>

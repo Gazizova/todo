@@ -1,6 +1,6 @@
 $primary-color: #fc2f70;
 $secondary-color: desaturate($primary-color, 70%);
-$text: darken($secondary-color, 30%);
+$text: #414493db;
 $success: transparentize(adjust-hue($primary-color, -120deg), 0.5);
 
 .App {
@@ -29,17 +29,16 @@ form {
   width: 100%;
 }
 form > input {
-  font-size: 20px;
-  padding: 0;
-  width: 100%;
-  // border: 0;
-  // border: 1px solid $primary-color;
+  font-size: 15px;
+  padding: 0 0 0 10px;
+  width: 93%;
+  height: 25px;
 }
 .Todo-block {
   //padding: 10px;
 }
 .Todo-List input {
-  font-size: 20px;
+  font-size: 15px;
 }
 .Todo-List ul {
   padding: 0px;
@@ -54,6 +53,7 @@ form > input {
 
 .delete-item a {
   visibility: visible;
+  text-decoration: none;
 }
 .Footer {
   display: flex;
